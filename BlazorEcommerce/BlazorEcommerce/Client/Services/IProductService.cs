@@ -4,7 +4,8 @@ namespace BlazorEcommerce.Client.Services
 {
     public interface IProductService
     {
-        static List<Product> Products { get; set; }
-        Task GetProducts();
+        List<Product> Products { get; set; }
+        Task<ServiceResponse<List<Product>>> GetProducts();
+        Task<ServiceResponse<Product>> GetProduct(int id);
     }
 }
